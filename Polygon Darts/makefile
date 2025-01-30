@@ -4,11 +4,11 @@ lab1: main.o read.o sort.o print.o
 main.o: main.cc lab1.h
 	g++ -c main.cc
 
-read.o: read.cc labe1.h
-	g++ read.cc
+read.o: read.cc lab1.h
+	g++ -c read.cc
 
-read.o: print.cc labe1.h
-	g++ print.cc
+sort.o: sort.cc lab1.h
+	g++ -c sort.cc
 
-read.o: sort.cc labe1.h
-	g++ print.cc
+print.o: print.cc lab1.h
+	g++ -c print.cc
