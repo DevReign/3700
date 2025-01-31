@@ -93,6 +93,6 @@ std::istream &operator>>(std::istream &is, Fraction &f){
 	return is;
 }
 std::ostream &operator<<(std::ostream &os, Fraction f){
-	os << f.getNum() << " / " << f.getDen();
+	os << "(" << f.getNum() << " / " << f.getDen() << ")";
 	return os;
 }

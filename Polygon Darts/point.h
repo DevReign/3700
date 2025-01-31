@@ -27,7 +27,7 @@ public:
 
 	Fraction getX() { return x; }
 	Fraction getY() { return y; }
-	void print() { std::cout<<"("<< x << ", " <<y<<")\n"; }
+	void print() { std::cout<<"("<< x << ", " << y <<")\n"; }
 };
 
 #endif
