@@ -1,14 +1,33 @@
-point.h
+#include <iostream>
+#include "fraction.h"
 
-#pragmaonce
+#ifndef POINT_H
+#define POINT_H
 
 class Point
 {
 private:
-	float x, y;
+	Fraction x, y;
 public:
-	Point();
-	~Point();
+	Point(Fraction _x=Fraction(),Fraction _y=Fraction());
+	~Point()=default;
 
-	
+	Point operator+(Point rhs);
+	Point operator-(Point rhs);
+	Point operator/(Point rhs);
+	Point operator*(Point rhs);
+	Point operator=(Point rhs);
+
+	bool operator==(Point rhs);
+	bool operator!=(Point rhs);
+	bool operator<=(Point rhs);
+	bool operator>=(Point rhs);
+	bool operator<(Point rhs);
+	bool operator>(Point rhs);
+
+	Fraction getX() { return x; }
+	Fraction getY() { return y; }
+	void print() { std::cout<<"("<< x << ", " <<y<<")\n"; }
 };
+
+#endif

@@ -2,12 +2,17 @@
 #include <stdlib.h>
 #include <iostream>
 #include <cstdlib>
-#include "fraction.h"
+#include "point.h"
 
 using namespace std;
 
 int main(int argc, char *args[])
 {
-	printf("Hello World\n");
+	//Fraction x(5,5);
+	Fraction y(2,7);
+	Point b(Fraction(5,5), y);
+
+	b.print();
+	
 	return 0;
 }
