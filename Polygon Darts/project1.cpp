@@ -8,9 +8,8 @@ using namespace std;
 
 int main(int argc, char *args[])
 {
-	//Fraction x(5,5);
-	Fraction y(2,7);
-	Point b(Fraction(5,5), y);
+	Fraction(2,7);
+	Point b(Fraction(5,5), Fraction(2,7));
 
 	b.print();
 	
