@@ -25,7 +25,7 @@ Fraction::Fraction(int32_t n,int32_t d){
 		d = -d;
 		n = -n;
 	}
-	int32_t g = std::gcd(n, d);
+	int32_t g = gcd(n, d);
 	num = n / g;
 	den = d / g;
 }
@@ -93,6 +93,6 @@ std::istream &operator>>(std::istream &is, Fraction &f){
 	return is;
 }
 std::ostream &operator<<(std::ostream &os, Fraction f){
-	os << "(" << f.getNum() << " / " << f.getDen() << ")";
+	os << f.getNum() << " / " << f.getDen();
 	return os;
 }

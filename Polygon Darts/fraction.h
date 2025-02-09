@@ -29,6 +29,7 @@ public:
 	bool operator>(Fraction rhs);
 	bool operator>=(Fraction rhs);
 
+
 	int32_t getNum() { return num; }
 	int32_t getDen() { return den; }
 private:

@@ -15,7 +15,9 @@ public:
 	Point operator+(Point rhs);
 	Point operator-(Point rhs);
 	Point operator/(Point rhs);
+	Point operator/(Fraction rhs);
 	Point operator*(Point rhs);
+	Point operator*(Fraction rhs);
 	Point operator=(Point rhs);
 
 	bool operator==(Point rhs);
@@ -27,7 +29,9 @@ public:
 
 	Fraction getX() { return x; }
 	Fraction getY() { return y; }
-	void print() { std::cout<<"("<< x << ", " << y <<")\n"; }
 };
+
+std::istream& operator>>(std::istream&, Point&);
+std::ostream& operator<<(std::ostream&, Point);
 
 #endif
