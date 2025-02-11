@@ -1,8 +1,11 @@
-all: project1.cpp
-	g++ project1.cpp fraction.cpp point.cpp -o main
-	touch project1.cpp
-run:
-	./main
+project1: project1.o point.o fraction.o
+	g++ -o main project1.o fraction.o point.o 
 
-clean:
-	rm main
+project1.o: project1.cpp point.h 
+	g++ -c project1.cpp
+
+point.o: point.cpp point.h
+	g++ -c point.cpp
+
+fraction.o: fraction.cpp fraction.h
+	g++ -c fraction.cpp

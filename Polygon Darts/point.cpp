@@ -19,26 +19,11 @@ Point Point::operator-(Point rhs){
 	return Point(s, t); 
 }
 
-Point Point::operator/(Point rhs){
-	Fraction s, t;
-	s = x / rhs.x;
-	t = y / rhs.y;
-	return Point(s, t);
-}
-Point Point::operator/(Fraction rhs) {
-	Fraction s, t;
-	s = x / rhs;
-	t = y / rhs;
-	return Point(s, t);
-}
-Point Point::operator*(Point rhs) {
-	Fraction s, t;
-	s = x * rhs.x;
-	t = y * rhs.y;
-	return Point(s, t); 
+Fraction Point::operator*(Point rhs){
+	return x * rhs.getY() - y * rhs.getX(); 
 }
 
-Point Point::operator*(Fraction rhs) {
+Point Point::operator*(Fraction rhs){
 	Fraction s, t;
 	s = x * rhs;
 	t = y * rhs;
@@ -51,12 +36,18 @@ Point Point::operator=(Point rhs){
 	return *this;
 }
 
-bool Point::operator==(Point rhs) { return (x == rhs.x && y == rhs.y); }
+bool Point::operator==(Point rhs){ return (x == rhs.x && y == rhs.y); }
 bool Point::operator!=(Point rhs){ return (x != rhs.x || y != rhs.y);}
-bool Point::operator<=(Point rhs) { return (x < rhs.x || (x == rhs.x && y < rhs.y)); }
-bool Point::operator>=(Point rhs) { return (x >= rhs.x && y >= rhs.y); }
 bool Point::operator<(Point rhs){ return (x < rhs.x || (x == rhs.x && y < rhs.y)); }
-bool Point::operator>(Point rhs){ return (x > rhs.x && y > rhs.y); }
+/*
+bool Point::operator>=(Point rhs){ return (x >= rhs.x && y >= rhs.y); }
+bool Point::operator<=(Point rhs){ return (x < rhs.x || (x == rhs.x && y < rhs.y)); }
+bool Point::operator>(Point rhs){ 
+	if(x>rhs.x)
+		return true;
+	else
+		return (y > rhs.y);
+}*/
 
 std::istream& operator>>(std::istream& is, Point& p) {
 	Fraction x, y;

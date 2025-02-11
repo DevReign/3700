@@ -15,13 +15,12 @@ static int32_t gcd(int32_t a,int32_t b) {
 		r = a % b;
 		a = b;
 		b = r;
-		}
-		return a;
+	}
+	return a;
 }
 
 Fraction::Fraction(int32_t n,int32_t d){
-	if (d < 0)
-	{
+	if (d < 0){
 		d = -d;
 		n = -n;
 	}

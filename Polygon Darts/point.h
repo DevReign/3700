@@ -14,18 +14,18 @@ public:
 
 	Point operator+(Point rhs);
 	Point operator-(Point rhs);
-	Point operator/(Point rhs);
-	Point operator/(Fraction rhs);
-	Point operator*(Point rhs);
+	//Point operator/(Point rhs);
+	//Point operator/(Fraction rhs);
+	Fraction operator*(Point rhs);
 	Point operator*(Fraction rhs);
 	Point operator=(Point rhs);
 
 	bool operator==(Point rhs);
 	bool operator!=(Point rhs);
-	bool operator<=(Point rhs);
-	bool operator>=(Point rhs);
+//	bool operator<=(Point rhs);
+//	bool operator>=(Point rhs);
 	bool operator<(Point rhs);
-	bool operator>(Point rhs);
+	//bool operator>(Point rhs);
 
 	Fraction getX() { return x; }
 	Fraction getY() { return y; }
