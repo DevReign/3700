@@ -1,0 +1,14 @@
+lab1: main.o read.o sort.o print.o
+	g++ -o lab1 main.o read.o sort.o print.o
+
+main.o: main.cc lab1.h
+	g++ -c main.cc
+
+read.o: read.cc labe1.h
+	g++ read.cc
+
+read.o: print.cc labe1.h
+	g++ print.cc
+
+read.o: sort.cc labe1.h
+	g++ print.cc

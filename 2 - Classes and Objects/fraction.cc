@@ -1,10 +1,10 @@
 #include "fraction.h"
+
 // static here tells the compiler that only functions in this file can access
 // the function; functions in other files don’t see it.
 //git pull origin main From https://github.com/SnowyOwl000/3700.s25.public
 //popd
 //g++ ftest.cc fraction.cc
-
 static int32_t gcd(int32_t a,int32_t b) {
 	int32_t
 	r;
@@ -54,12 +54,15 @@ Fraction Fraction::operator*(Fraction rhs){
 }
 Fraction Fraction::operator/(Fraction rhs){
 	int32_t s, t;
+
 	s = num * rhs.den;
 	t = den * rhs.num;
 	return Fraction(s,t);
 }
 
 Fraction Fraction::operator=(Fraction rhs){
+	int32_t s, t;
+
 	num = rhs.num;
 	den = rhs.den;
 	return *this;
